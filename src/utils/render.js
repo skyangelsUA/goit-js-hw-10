@@ -37,7 +37,7 @@ export function render(data) {
                     </li>
                     <li>
                         <p class="country_description_title">
-                            Capital: <span class="country-description-data">${d.capital}</span>
+                            Capital: <span class="country_description_data">${d.capital}</span>
                         </p>
                     </li>
                     <li>
