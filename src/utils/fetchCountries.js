@@ -1,6 +1,6 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-export function fetch(name) {
+export function fetchCountries(name) {
     const url = `https://restcountries.com/v2/name/${name}?fields=name,capital,population,flags,languages`;
 
 
@@ -9,6 +9,6 @@ export function fetch(name) {
             Notify.failure(`На жаль, країни з такою назвою немає`);
             throw Error(`Помилка: ${r.statusText}`);
         }
-        return r.json()
+        return r.json();
     });
 }

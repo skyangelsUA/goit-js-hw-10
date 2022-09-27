@@ -1,4 +1,4 @@
-import { fetch } from "./fetch";
+import { fetchCountries } from "./fetchCountries";
 import { render } from "./render";
 
 import { Notify } from "notiflix/build/notiflix-notify-aio";
@@ -15,7 +15,7 @@ export function click() {
     if (!name) return Notify.warning(`Будь ласка, введіть назву країни!`);
 
 
-    fetch(name).then(data => render(data)).catch(error => {
+    fetchCountries(name).then(data => render(data)).catch(error => {
         console.error(error);
     });
 }
